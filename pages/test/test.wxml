@@ -1,0 +1,29 @@
+<!-- wxml >> html -->
+<!-- wxss >>css -->
+<!-- <view></view> >>div -->
+<!-- <text></text> >>span -->
+<!-- <view class="div1" div="div-{{number}}">{{message}}</view> -->
+
+<!-- v-if v-else -->
+<view wx:if="{{condition}}">我是显示的</view>
+<view wx:else="{{condition}}">我是不显示的</view>
+<!-- 条件渲染，只是控制显示和隐藏 -->
+<view hidden="{{condition}}">我的hidden是true</view>
+<view hidden="{{!condition}}">我的hidden是false</view>
+
+<!-- 列表渲染 -->
+<block> wx:for="{{arr}}" wx:for-index="xx" wx:for-item="xxx" wx:key="xxx.id">
+  {{xx}}: 我是id：{{xxx.id}},我是text：{{xxx.text}}
+</block>
+
+<!-- <block></block>  浮层，不会出现在页面上，但会有这个div
+wx:if  wx:elif wx:else
+hidden
+wx:for wx:for-item wx:for-index wx:key -->
+
+<navigator url="/pages/index/index">go to index</navigator>
+<!-- <navigator>这个相当于a标签 -->
+
+<view>{{str}}</view>
+<button bindtap="reverseStr">我是一个按钮</button>  
+<!-- bindtap 相当于 onclick -->
