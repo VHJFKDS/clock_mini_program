@@ -27,3 +27,43 @@ wx:for wx:for-item wx:for-index wx:key -->
 <view>{{str}}</view>
 <button bindtap="reverseStr">我是一个按钮</button>  
 <!-- bindtap 相当于 onclick -->
+--------------------------------------------
+
+<view wx:for="{{arr}}" wx:for-index="index" wx:for-item="item">
+{{index}},{{item}}
+</view>
+<!-- wx:for-index="index" wx:for-item="item" 是它的默认值，就算不写也会这样展示 -->
+<button bindtap="pushItem">我是加一按钮</button>
+--------------------------------------------
+<view>{{obj.id}}:{{obj.text}}</view>
+<button bindtap="changeObjText">修改信息</button>
+————————————————————————————————————————————
+<view class="{{xx ? 'active' : ''}}">我会改变颜色</view>
+<button bindtap="changeColor">修改颜色</button>
+
+  // "tabBar":{
+  //   "color":"#515151",
+  //   "selectedColor":"#F6705A",
+  //   "backgroundColor":"#fff",
+  //   "borderStyle":"black",
+  //   "list":[
+  //     {
+  //       "pagesPath":"pages/home/home",
+  //       "text":"专注",
+  //       "iconPath":"images/home.png",
+  //       "selectedIconPath":"images/home-active.png"
+  //     },
+  //     {
+  //       "pagesPath":"pages/home/home",
+  //       "text":"数据统计",
+  //       "iconPath":"images/home.png",
+  //       "selectedIconPath":"images/total-active.png"
+  //     },
+  //     {
+  //       "pagesPath":"pages/home/home",
+  //       "text":"我的",
+  //       "iconPath":"images/home.png",
+  //       "selectedIconPath":"images/me-active.png"
+  //     }
+  //   ]
+  // },

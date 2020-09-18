@@ -1,16 +1,18 @@
 {
   "pages":[
-    "pages/test/test",
-    "pages/logs/logs",
-    "pages/index/index"
+    "pages/home/home",
+    "components/button/button",
     
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "番茄闹钟",
     "navigationBarTextStyle":"black"
   },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+
 }
