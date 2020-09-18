@@ -1,8 +1,8 @@
 {
   "pages":[
-    "pages/home/home",
-    "components/button/button",
     
+    "pages/home/home",
+    "components/clock/clock",
     "pages/logs/logs"
   ],
   "window":{
