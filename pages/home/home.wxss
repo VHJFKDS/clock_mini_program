@@ -43,6 +43,7 @@ justify-content: center;
   box-shadow: 0rpx 2rpx 6rpx 0rpx rgba(0,0,0,0.1);
   border-radius: 8rpx;
   padding: 17rpx 50rpx;
+  margin-bottom: 24rpx;
 }
 .toduList .item:last-child{margin: 0;}
 .toduList .item text{

@@ -10,5 +10,6 @@
   <view class="tomato">
 		<g-clock text="点击开始闹钟"></g-clock>
   </view>
-  </view>
+	</view>
+	<g-confirm placeholder="我完成了什么" bindconfirm="confirm" bindcancel="cancel" visible="{{visible}}"></g-confirm>
 </view>

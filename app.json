@@ -2,7 +2,7 @@
   "pages":[
     
     "pages/home/home",
-    "components/clock/clock",
+    "components/confirm/confirm",
     "pages/logs/logs"
   ],
   "window":{
