@@ -1,9 +1,7 @@
 {
   "pages":[
-    
+    "pages/tomato/tomato",
     "pages/home/home",
-    "components/confirm/confirm",
-    "pages/logs/logs",
     "pages/test/test"
   ],
   "window":{
