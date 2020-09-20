@@ -40,7 +40,7 @@ xx:false
     //小程序基本不能用push方法,但下面方法相当于push
     let last = this.data.arr[this.data.arr.length-1]+1
     let newArr = [last]
-    this.data.arr = this.data.arr.concat(newArr)
+    this.data.arr = newArr.concat(this.data.arr)
     this.setData({arr: this.data.arr})
   },
   reverseStr(){

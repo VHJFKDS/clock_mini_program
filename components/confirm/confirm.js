@@ -9,6 +9,9 @@ Component({
       value:false
     }
   },
+  data:{
+    value:""
+  },
   methods:{
     confirm(){
       this.triggerEvent('confirm',this.data.value)
