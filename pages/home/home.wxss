@@ -8,8 +8,8 @@
 }
 .tomato-wrapper{
   flex: 1;
-  margin-top:66px ;
-  padding: 0 28px;
+  margin-top:66rpx ;
+  padding: 0 28rpx;
 }
 .tomato-wrapper .tomato{
   background: #eef7f6;
@@ -63,8 +63,8 @@ justify-content: center;
 .todoList .item .select.active::before{
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 15%;
+  top: 15%;
   transform: translate((-50%,-50%));
   width: 20rpx;
   height: 20rpx;

@@ -5,11 +5,11 @@
 			<text>{{item.text}}</text>
 		</view>
 	</scroll-view>
-  <g-button size="mini" type="change" text="创建任务" bindtap="showConfirm"></g-button>
+  <g-button class="createButton"  type="change" text="创建任务" bindtap="showConfirm"></g-button>
   <view class="tomato-wrapper">
-  <view class="tomato">
+  <navigator class="tomato" url="/pages/tomato/tomato">
 		<g-clock text="点击开始闹钟"></g-clock>
-  </view>
+  </navigator>
 	</view>
 	<g-confirm placeholder="我完成了什么" bindconfirm="confirmCreate" bindcancel="hideConfirm" visible="{{visibleConfirm}}"></g-confirm>
 </view>

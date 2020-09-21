@@ -5,6 +5,7 @@ Page({
       {id:2,text:"我今天干了什么，明天干了什么，后天干了什么",finished:true},
       {id:3,text:"我今天干了什么，明天干了什么，后天干了什么",finished:false},
       {id:4,text:"我今天干了什么，明天干了什么，后天干了什么",finished:true},
+      {id:5,text:"我今天干了什么，明天干了什么，后天干了什么",finished:true},
     ],
     visibleConfirm:false
   },
