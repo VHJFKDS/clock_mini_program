@@ -13,7 +13,7 @@ button::after{border: none;}
 }
 .tomato-button.change{
   background: linear-gradient(to right,#ef9b75,#f6705a);
-  box-shadow: 0px 11px 32px 0px rgba(246,112,90,0,30);
+  box-shadow: 0rpx 11rpx 32rpx 0rpx rgba(246,112,90,0,30);
 }
 .tomato-button.default{
   background: transparent;
