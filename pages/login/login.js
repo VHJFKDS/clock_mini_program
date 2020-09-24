@@ -7,10 +7,9 @@ Page({
   },
   //点击按钮=>调用小程序原生wx:login => 参数 => http.post => 返回user => 保存user =>返回首页
  login(event){
-   let encrypted_data = event.detail.encrypted_data
+   let encrypted_data = event.detail.encryptedData
    let iv = event.detail.iv
    this.wxLogin(encrypted_data,iv)
-   console.log(this.wxLogin)
  },
  wxLogin(encrypted_data,iv){
   wx.login({

@@ -1,10 +1,10 @@
 {
   "pages":[
+    "pages/home/home",
     
-    "pages/login/login",
     "pages/binding/binding",
     "pages/me/me",
-    "pages/home/home",
+    "pages/login/login",
     "pages/tomato/tomato",
     
     "pages/test/test"
@@ -34,7 +34,7 @@
         "selectedIconPath": "images/total-active.png"
       },
       {
-        "pagePath": "pages/test/test",
+        "pagePath": "pages/me/me",
         "text": "我的",
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me-active.png"
