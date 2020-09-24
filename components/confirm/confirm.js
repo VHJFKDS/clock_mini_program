@@ -18,7 +18,9 @@ Component({
   },
   lifetimes:{
     attached(){
+      if (this.properties.value) {
       this.properties.value = this.data._value
+      }
     },
   },
   methods:{

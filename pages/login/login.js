@@ -30,7 +30,7 @@ Page({
 })    
 },
    saveMessage(response){
-  wx.setStorageSync('me', response.data.resource)
+     wx.setStorageSync('me', response.data.resource)
      wx.setStorageSync('X-token', response.header["X-token"])
    }
 })

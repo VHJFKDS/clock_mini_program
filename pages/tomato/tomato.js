@@ -1,16 +1,22 @@
 // pages/tomato/tomato.js
+const {http} = require('../../lib/http.js')
+
 Page({
   timer:null,
   data: {
-   defalutSecond:5,
+   defalutSecond:1500,
    time:"",
    timerStatus:'stop',
    confirmVisible:false,
    againButtonVisible:false,
-   finishConfirmVisible:false
+   finishConfirmVisible:false,
+   tomato:{}
   },
   onShow: function () {
    this.startTimer()
+   http.post('/tomatoes').then(response =>{
+     this.setData({tomato:response.data.resource})
+   })
   },
   startTimer(){
     this.setData({timerStatus:'start'})
@@ -51,9 +57,15 @@ this.setData({time:`${m}:${s}`})
 },
 confirmAbandon(event){
  let content = event.detail 
- wx.navigateBack({
-   to:-1,
+ http.put(`/tomatoes/${this.data.tomato.id}`,{
+   description:content,
+   aborted:true
+ }).then(response =>{
+  wx.navigateBack({
+    to:-1,
+  })
  })
+
 },
 confirmFinish(event){
  let content = event.detail
@@ -69,19 +81,20 @@ hideConfirm(){
  this.setData({confirmVisible:false})
  this.startTimer()
 },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
+onHide(){
+  this.clearTimer()
+  http.put(`/tomatoes/${this.data.tomato.id}`,{
+    description:"退出放弃",
+    aborted:true
+  })
+},
+onUnload(){
+  this.clearTimer()
+  http.put(`/tomatoes/${this.data.tomato.id}`,{
+    description:"退出放弃",
+    aborted:true
+  })
+}
 
   
 })

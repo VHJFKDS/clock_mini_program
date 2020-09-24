@@ -16,9 +16,10 @@ Page({
   },
  confirmCreate(event){
   let content = event.detail
+  console.log(content)
   if(content){
   http.post('/todos',{
-      completed:false,description:event.detail 
+      completed:false,description:content  //event.detail 
   })
   .then(response=>{
    let todo = [response.data.resource]
@@ -30,13 +31,14 @@ Page({
  },
 
  changeText(event){
-   let {content,id,index} = event.currentTarget.detaset
+   let {content,id,index} = event.currentTarget.dataset
    this.updateId = id
    this.updateIndex = index
    this.setData({visibleUpdateConfirm:true,updateContent:content})
  },
  confirmUpdate(event){
   let content = event.detail
+  console.log(content)
   http.put(`/todos/${this.updateId}`,{
     description:content
   }).then(response =>{
