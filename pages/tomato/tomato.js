@@ -24,7 +24,7 @@ Page({
     this.timer = setInterval(() => {
       this.data.defalutSecond = this.data.defalutSecond -1
       this.changeTime()
-      if(this.data.defalutSecond === 0){
+      if(this.data.defalutSecond <= 0){
         this.setData({againButtonVisible:true})
         this.setData({finishConfirmVisible:true})
        return this.clearTimer()
@@ -32,7 +32,7 @@ Page({
     },1000 );
   },
   againTimer(){
-   this.data.defalutSecond = 5
+   this.data.defalutSecond = 1500
    this.setData({againButtonVisible:false})
    this.startTimer()
   },
@@ -65,7 +65,6 @@ confirmAbandon(event){
     to:-1,
   })
  })
-
 },
 confirmFinish(event){
  let content = event.detail
@@ -95,6 +94,4 @@ onUnload(){
     aborted:true
   })
 }
-
-  
 })

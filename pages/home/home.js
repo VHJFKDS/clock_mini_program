@@ -11,7 +11,7 @@ Page({
   },
   onShow(){
    http.get('/todos?completed=false').then(response=>{
-     this.setData({lists:response.data.resource})
+     this.setData({lists:response.data.resources})
    })
   },
  confirmCreate(event){
